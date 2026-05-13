@@ -22,6 +22,36 @@ This project enables secure communication and encrypted file sharing between a c
 
 # Security Notes
 
-Sensitive files are excluded using .gitignore
-Encryption keys are not uploaded publicly
-Intended for educational and learning purposes
+- Sensitive files are excluded using .gitignore 
+- Encryption keys are not uploaded publicly.
+- Intended for educational and learning purposes.
+
+# Future Improvements
+
+- User authentication
+- Firebase integration
+- Cloud storage support
+- GUI enhancements
+- Activity history tracking
+- Multi-user support
+
+# Author
+
+Developed by Niti
+
+# License
+
+This project is open-source and available for educational use.
+
+# Project Structure
+
+```bash
+project-folder/
+│
+├── .gitignore
+├── README.md
+├── index.html
+├── login.html
+├── mtrix.js
+├── script.js
+├── style.css
