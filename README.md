@@ -20,7 +20,7 @@ This project enables secure communication and encrypted file sharing between a c
 - Encryption Libraries
 - VS Code
 
-#Security Notes
+# Security Notes
 
 Sensitive files are excluded using .gitignore
 Encryption keys are not uploaded publicly
