@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SecureVault Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- Matrix Background -->
+
+<canvas id="matrix"></canvas>
+
+
+<!-- Loader Screen -->
+
+<div class="loader-screen"
+     id="loaderScreen"
+     style="display:none;">
+
+    <div class="loader"></div>
+
+    <p>Loading SecureVault...</p>
+
+</div>
+
+
+<!-- Login Box -->
+
+<div class="login-box">
+
+    <h1>🔐 SecureVault</h1>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Username"
+    >
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password"
+    >
+
+    <button onclick="login()">
+        LOGIN
+    </button>
+
+    <p id="loginStatus"></p>
+
+</div>
+
+
+
+<script>
+
+// =========================
+// Login Function
+// =========================
+
+function login(){
+
+    const username =
+    document.getElementById("username").value;
+
+    const password =
+    document.getElementById("password").value;
+
+
+    // Correct Credentials
+
+    if(username === "admin" &&
+       password === "1234"){
+
+
+        // Hide Login Box
+
+        document.querySelector(".login-box")
+        .style.display = "none";
+
+
+        // Show Loader
+
+        document.getElementById("loaderScreen")
+        .style.display = "flex";
+
+
+        // Fake Loading Delay
+
+        setTimeout(() => {
+
+            localStorage.setItem(
+                "loggedIn",
+                "true"
+            );
+
+            window.location.href =
+            "index.html";
+
+        }, 2500);
+    }
+
+    else{
+
+        document.getElementById(
+            "loginStatus"
+        ).innerText =
+        "Invalid Credentials";
+    }
+}
+
+
+
+// =========================
+// Enter Key Support
+// =========================
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Enter"){
+
+            login();
+        }
+    }
+);
+
+</script>
+
+
+<!-- Matrix Animation -->
+
+<script src="matrix.js"></script>
+
+</body>
+
+</html>

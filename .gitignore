@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+secret.key
+venv/
+.env
+uploads/
+encrypted_files/

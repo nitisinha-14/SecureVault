@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SecureVault</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+
+<div class="main-layout">
+
+    <!-- LEFT PANEL -->
+
+    <div class="container">
+
+        <h1>🔐 SecureVault</h1>
+
+        <p class="subtitle">
+            Cybersecurity File Encryption Tool
+        </p>
+
+
+        <!-- Drag Area -->
+
+        <div class="drop-area" id="dropArea">
+
+            <p>📂 Drag & Drop File Here</p>
+
+            <input type="file" id="fileInput">
+
+        </div>
+
+
+        <!-- Password -->
+
+        <input
+            type="password"
+            id="encryptionPassword"
+            placeholder="Enter Encryption Password"
+            class="password-box"
+        >
+
+
+        <!-- Progress -->
+
+        <div class="progress-container">
+
+            <div class="progress-bar"
+                 id="progressBar"></div>
+
+        </div>
+
+
+        <!-- Buttons -->
+
+        <div class="buttons">
+
+            <button onclick="encryptFile()">
+                Encrypt
+            </button>
+
+            <button onclick="decryptFile()">
+                Decrypt
+            </button>
+
+        </div>
+
+
+        <p id="status"></p>
+
+    </div>
+
+
+    <!-- RIGHT PANEL -->
+
+    <div class="result-panel">
+
+        <h2>📁 Processed File</h2>
+
+        <div class="result-box"
+             id="resultBox">
+
+            <p id="resultFileName"></p>
+
+            <button id="downloadBtn">
+                Download File
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+<script src="matrix.js"></script>
+
+</body>
+
+</html>
