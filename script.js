@@ -1,7 +1,3 @@
-// =========================
-// ELEMENTS
-// =========================
-
 const statusText =
 document.getElementById("status");
 
@@ -13,11 +9,6 @@ document.getElementById("fileInput");
 
 const dropArea =
 document.getElementById("dropArea");
-
-
-// =========================
-// DRAG & DROP
-// =========================
 
 ["dragenter", "dragover"].forEach(eventName => {
 
@@ -49,10 +40,7 @@ dropArea.addEventListener("drop", (e) => {
     e.dataTransfer.files;
 });
 
-
-// =========================
 // PASSWORD KEY
-// =========================
 
 function generateKey(password){
 
@@ -66,10 +54,7 @@ function generateKey(password){
     return key % 256;
 }
 
-
-// =========================
 // PROGRESS BAR
-// =========================
 
 function updateProgress(){
 
@@ -105,10 +90,7 @@ function updateProgress(){
     }, 40);
 }
 
-
-// =========================
 // ENCRYPT FILE
-// =========================
 
 function encryptFile(){
 
@@ -176,10 +158,7 @@ function encryptFile(){
     reader.readAsArrayBuffer(file);
 }
 
-
-// =========================
 // DECRYPT FILE
-// =========================
 
 function decryptFile(){
 
@@ -263,10 +242,7 @@ function decryptFile(){
     reader.readAsArrayBuffer(file);
 }
 
-
-// =========================
 // SHOW RESULT PANEL
-// =========================
 
 function showResult(blob, filename){
 
