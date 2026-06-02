@@ -18,7 +18,6 @@ This project enables secure communication and encrypted file sharing between a c
 - Python
 - Socket Programming
 - Encryption Libraries
-- VS Code
 
 # Security Notes
 
